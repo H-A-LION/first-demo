@@ -1,0 +1,31 @@
+Recommended structure of the webstore model:
+webstore-project/
+│
+├── client/                 # Frontend
+│   ├── public/             # Static files (images, favicon, etc.)
+│   ├── src/                # Main source code
+│   │   ├── assets/         # Images, fonts, etc.
+│   │   ├── components/     # Reusable UI components (e.g., Button, Navbar)
+│   │   ├── pages/          # Page components (e.g., Home, ProductPage)
+│   │   ├── services/       # API calls, Firebase integration
+│   │   ├── App.js
+│   │   └── index.js
+│   └── package.json
+│
+├── server/                 # Backend (Node.js + Express)
+│   ├── controllers/        # Request handlers
+│   ├── routes/             # API route definitions
+│   ├── models/             # DB models (for SQL or MongoDB)
+│   ├── middleware/         # Auth, logging, etc.
+│   ├── config/             # DB config, Firebase setup
+│   ├── utils/              # Helper functions
+│   ├── server.js           # Entry point
+│   └── package.json
+│
+├── database/               # SQL scripts or NoSQL schemas
+│   ├── schema.sql          # For SQL (if using)
+│   ├── firebase.rules      # If using Firebase
+│
+├── .env                    # Environment variables
+├── .gitignore
+└── README.md
